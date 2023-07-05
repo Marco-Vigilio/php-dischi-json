@@ -1,11 +1,9 @@
 <?php
-
+header('Content-Type: application/json');
 $string = file_get_contents("./db/dischi.json");
 
-//$result = json_encode($string);
+$result = json_decode($string, true);
 
-header('Content-Type: application/json');
-
-echo ($string);
-
+echo (json_encode($result));
+exit(0);
 ?>
