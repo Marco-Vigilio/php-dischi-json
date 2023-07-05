@@ -4,7 +4,7 @@ $string = file_get_contents("./db/dischi.json");
 
 header('Content-Type: application/json');
 
-echo $string;
-//var_dump($string);
+$result = json_encode($string);
+echo ($string);
 
 ?>
