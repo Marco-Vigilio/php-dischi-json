@@ -4,6 +4,53 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #1D2D3C;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
+    background-color: #06131F;
+}
+
+.header .image {
+    width: 250px;
+    padding: 1rem 3rem;
+}
+
+.contain {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .item {
-    border: 2px solid black;
+    border-radius: .3rem;
+    background-color: #112030;
+    width: calc((100% - 12rem) / 3);
+    height: 450px;
+    padding: 3rem 3.5rem 1rem;
+    margin: 2rem;
+}
+
+.info {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+p.bold {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 1rem 0;
 }
