@@ -3,16 +3,20 @@ let { createApp } = Vue;
 createApp({
     data() {
         return {
-            name: "qualcosa",
+            apiUrl: "./db/dischi.json",
+            object: [],
         }
     },
     methods: {
-        newEmail() {
-            axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+        getItems() {
+            axios.get(this.apiUrl)
                 .then(risposta => {
-                    this.email = risposta.data.response;
-                    this.emailList.push(this.email);
+                    console.log(risposta.data);
+                    this.object = risposta.data;
                 });
         },
-    }
+    },
+    created() {
+        this.getItems();
+    },
 }).mount("#app");
